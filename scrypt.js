@@ -177,7 +177,6 @@ setInterval(() => {
         let c = document.querySelectorAll(".colors_li")
         for (i = 0; i < c.length; i++)
             c[i].style.color = "blueviolet";
-        document.querySelector(".colors_li").classList.add("bounce");
     }, 5000)
 }, 5000);
 
@@ -324,13 +323,25 @@ window.addEventListener("scroll", () => {
     } else {
         document.querySelector(".click_too_top").style.right = "15px"
     }
-    if (scrollY = +1800) {
-        progress_time_add()
+    if (scrollY > 1800) {
+
+        var isResizeble = false;
+
+        if (!isResizeble) {
+
+
+            isRezeble = true;
+        }
     }
 })
 
 
 // // progress animation
+setTimeout(() => {
+    progress_time_add()
+}, 1500);
+
+
 function progress_time_add() {
     let pr_1 = 50,
         pr_2 = 40,
@@ -347,7 +358,7 @@ function progress_time_add() {
         pr_4++
         pr_5++
         pr_6++
-    }, 30);
+    }, 20);
 
     function progress() {
 
@@ -381,7 +392,8 @@ function loader() {
 //     setInterval(loader, 1500);
 //     clearInterval = loadin;
 // }
-// // scrot to top arrow
+
+// // onload
 // window.onload = function() {
 //     loadin();
 // }
